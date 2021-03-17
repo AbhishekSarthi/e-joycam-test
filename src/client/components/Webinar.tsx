@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import List from './List';
-import './webinar.scss'
+
 
 
 interface Webs {
