@@ -1,5 +1,4 @@
-import { filter } from 'lodash';
-import React, { useState, useEffect, MouseEventHandler, ChangeEventHandler } from 'react';
+import React, { useState, useEffect} from 'react';
 import List from './List';
 import './webinar.scss'
 
@@ -11,7 +10,7 @@ interface Webs {
     EndTime: string;
     radio:string;
     WebLink: string;
-  }
+}
 
 const Default_Webs : Webs[] = [];  
 
@@ -23,43 +22,20 @@ const Webinar = () :JSX.Element => {
     const [webs, setWebs] = useState<Webs[]>(Default_Webs);
     const [radio,setRadio] = useState<string>('Not Verified');
 
-    // const handleChange = (
-    //     e: React.ChangeEvent<HTMLInputElement>
-    //   ) => {
-    //     setCriteria(e.currentTarget.value);
-    //   };
-    // const inputChange:(event: React.ChangeEvent<HTMLInputElement>) => string = (event) => {
-    //     console.log(event.target.value)
-    //     let value = event.target.value
-    //     return value
-    // }
-
-    // let inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setInputText(
-    //        event.target.value
-    //     )
-    //   }
 
     const inputTextHandler = (event: React.ChangeEvent<HTMLInputElement>) =>{
         setInputText(event.target.value);
-        console.log(event.target.value)
-        // setInputText("sdaf");
     };
 
     const inputStartTimeHandler = ( e: React.ChangeEvent<HTMLInputElement>) => {
         setInputStartTime(e.currentTarget.value);
-        // const newValue = e.currentTarget.value;
-        // setInputStartTime(newValue)
-        // console.log(e,newValue);
     };
 
     const inputEndTimeHandler = ( e:React.ChangeEvent<HTMLInputElement>) => {
         setInputEndTime(e.currentTarget.value);
-        // console.log(e);
     };
 
     const webLinkHandler = (e:React.FormEvent<HTMLInputElement>) => {
-        // console.log(e);
         setWebLink(e.currentTarget.value);
     };
     const onValueChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
@@ -69,13 +45,11 @@ const Webinar = () :JSX.Element => {
         else{
             setRadio('Verified');
         }
-        // console.log(e)
     }
 
 
     const submitHandler = () => {
-        // e.preventDefault();
-        console.log("buton clicked")
+
         setWebs([
             ...webs,
             {
@@ -87,16 +61,13 @@ const Webinar = () :JSX.Element => {
                 id: Math.random() * 1000,
             },
         ]);
-        // console.log(webs);
         setInputText('');
         setInputStartTime('');
         setInputEndTime('');
         setWebLink('');
     };
     useEffect(() => {
-        // setInputText("asdvas");
-        console.log(webs);
-        console.log(radio);
+
     }, [webs]);
     return (
         <>
