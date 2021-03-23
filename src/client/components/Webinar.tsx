@@ -73,29 +73,7 @@ const Webinar = () :JSX.Element => {
     return (
         <>
         
-            <div className="someSpace">
-                {/* {webs.map((web) => (
-                    <List
-                    key={web.id}
-                    webName={web.WebName}
-                    startTime={web.StartTime}
-                    endTime={web.EndTime}
-                    webLink={web.WebLink}
-                    Radio={web.radio}
-                    
-                    />
-                    
-                    ))} */}
-                     {webs.map((web) => (
-                    <WebinarShow  
-                    key={web.id}
-                    webName={web.WebName}
-                    startTime={web.StartTime}
-                    endTime={web.EndTime}
-                    webLink={web.WebLink}
-                    Radio={web.radio}/>
-                     ))}
-            </div>
+           
 
 
             <div className="special">
@@ -136,6 +114,30 @@ onChange={onValueChange}
             </button>
         
                     </div>
+
+                    <div className="someSpace">
+                {/* {webs.map((web) => (
+                    <List
+                    key={web.id}
+                    webName={web.WebName}
+                    startTime={web.StartTime}
+                    endTime={web.EndTime}
+                    webLink={web.WebLink}
+                    Radio={web.radio}
+                    
+                    />
+                    
+                    ))} */}
+                     {webs.map((web) => (
+                    <WebinarShow  
+                    key={web.id}
+                    webName={web.WebName}
+                    startTime={web.StartTime}
+                    endTime={web.EndTime}
+                    webLink={web.WebLink}
+                    Radio={web.radio}/>
+                     ))}
+            </div>
 
                     </>
     );
