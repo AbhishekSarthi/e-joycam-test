@@ -11,6 +11,7 @@ import { setNickname } from '../actions/NicknameActions'
 import {attendance} from './attendance'
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import Webinar from './Webinar'
+import WebinarShow from './WebinarShow'
 
 export type MediaProps = MediaState & {
   dial: typeof dial
@@ -187,11 +188,15 @@ export const Media = c(React.memo(function Media(props: MediaProps) {
         <div className="side-button-webinar">
           <Switch>
             <Route path="/webinar" exact component={Webinar} />
+            {/* <Route path="/webinarShow" exact component={WebinarShow} /> */}
           </Switch>
         </div> 
         <Link to="/webinar">
-          <li className="add-webinar">Check Webinar</li>
+          <li className="add-webinar">Webinar</li>
         </Link>
+        {/* <Link to="/webinarShow">
+          <li className="add-webinar">Check Webinar</li>
+        </Link> */}
       </Router>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import List from './List';
+import WebinarShow from './WebinarShow';
 
 
 
@@ -71,10 +72,36 @@ const Webinar = () :JSX.Element => {
     }, [webs]);
     return (
         <>
-        <div className="special">
+        
+            <div className="someSpace">
+                {/* {webs.map((web) => (
+                    <List
+                    key={web.id}
+                    webName={web.WebName}
+                    startTime={web.StartTime}
+                    endTime={web.EndTime}
+                    webLink={web.WebLink}
+                    Radio={web.radio}
+                    
+                    />
+                    
+                    ))} */}
+                     {webs.map((web) => (
+                    <WebinarShow  
+                    key={web.id}
+                    webName={web.WebName}
+                    startTime={web.StartTime}
+                    endTime={web.EndTime}
+                    webLink={web.WebLink}
+                    Radio={web.radio}/>
+                     ))}
+            </div>
+
+
+            <div className="special">
             <span className="span-margin">Webname : </span>
             <input className="webinar-input" value={inputText} onChange={(e) => inputTextHandler(e)} type="text" />
-            <span className="span-margin">Start Time : </span>
+            <span className="span-margin">Logo : </span>
             <input
             className="webinar-input"
             value={inputStartTime}
@@ -109,20 +136,7 @@ onChange={onValueChange}
             </button>
         
                     </div>
-            <div>
-                {webs.map((web) => (
-                    <List
-                    key={web.id}
-                    webName={web.WebName}
-                    startTime={web.StartTime}
-                    endTime={web.EndTime}
-                    webLink={web.WebLink}
-                    Radio={web.radio}
-                    
-                    />
-                    
-                    ))}
-            </div>
+
                     </>
     );
 };

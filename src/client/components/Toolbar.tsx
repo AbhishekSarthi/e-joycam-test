@@ -149,7 +149,7 @@ extends React.PureComponent<ToolbarProps, ToolbarState> {
           blink={!this.props.chatVisible && hasUnread}
           onClick={this.handleToggleChat}
           on={this.props.chatVisible}
-          title='Toggle Chat'
+          title='Chat'
         />
 
         <ToolbarButton
@@ -175,7 +175,7 @@ extends React.PureComponent<ToolbarProps, ToolbarState> {
               on={this.state.micMuted}
               icon='icon-mic_off'
               offIcon='icon-mic'
-              title='Toggle Microphone'
+              title='Microphone'
             />
             <ToolbarButton
               onClick={this.handleCamClick}
@@ -183,7 +183,7 @@ extends React.PureComponent<ToolbarProps, ToolbarState> {
               on={this.state.camDisabled}
               icon='icon-videocam_off'
               offIcon='icon-videocam'
-              title='Toggle Camera'
+              title='Camera'
             />
           </React.Fragment>
         )}
@@ -194,7 +194,7 @@ extends React.PureComponent<ToolbarProps, ToolbarState> {
           icon='icon-fullscreen_exit'
           offIcon='icon-fullscreen'
           on={this.state.fullScreenEnabled}
-          title='Toggle Fullscreen'
+          title='Fullscreen'
         />
 
           {this.props.dialState === DIAL_STATE_IN_CALL && (

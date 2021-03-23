@@ -26,7 +26,7 @@ const Notification = React.memo(
     const { notification } = props
     return (
       <div className={classnames(notification.type, 'notification')}>
-        {notification.message}
+        {/* {notification.message} */}
       </div>
     )
   },

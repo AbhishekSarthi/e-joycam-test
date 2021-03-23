@@ -253,7 +253,7 @@ body.call {
   right: 320px;
 }
 
-.special{
+.special {
   font-size: larger;
   background-color: #2e7691;
   padding: 10px;
@@ -269,22 +269,22 @@ body.call {
 // .side-button-webinar{
 
 // }
-a{
+
+a {
   text-decoration: none;
 }
-.add-webinar{
+.add-webinar {
   list-style: none;
 
   display: flex;
   margin-top: -340px;
-  margin-left: 1160px ;
+  margin-left: 1160px;
   @include button($color-primary, $color-warning);
-  color:beige;
+  color: beige;
   padding: 1rem;
   font-size: 1.2rem;
-  
 }
-.webinar-span{
+.webinar-span {
   color: aliceblue;
   text-align: center;
   margin-left: 5px;
@@ -302,20 +302,20 @@ a{
   font-size: 1.2rem;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;       /* Remove default arrow */
+  appearance: none; /* Remove default arrow */
   border: none;
   border-radius: 4px;
   border-bottom: 2px solid darken(#fff, 10%);
   color: black;
   background-color: white;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
-.span-margin{
+.span-margin {
   margin-bottom: 10px;
 }
 
-.webinar-list{
+.webinar-list {
   background-color: #2e7691;
   margin: auto;
   padding: 5px;
@@ -323,12 +323,49 @@ a{
   margin-bottom: 7px;
   font-size: larger;
   text-align: center;
-  width:80%;
+  width: 80%;
 }
 
-.black-span{
+.black-span {
   color: black;
 }
-.red-span{
+.red-span {
   color: darkred;
+}
+
+.special-card {
+  background-color: azure;
+  text-align: center;
+  width: 300px;
+  height: 110px;
+  display: flex;
+  margin: 10px;
+  float: left;
+}
+
+.special-card > .setImage {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 5px;
+  height: 100px;
+  width: 100px;
+}
+
+.nextline {
+  // display: flex;
+  margin-left: 5px;
+  text-align: left;
+  list-style: none;
+  // justify-content: center;
+  // margin-top: 40px;
+
+  // margin-left: 20px;
+}
+
+.biggText {
+  font-size: x-large;
+}
+
+.someSpace {
+  margin-bottom: 200px;
 }
