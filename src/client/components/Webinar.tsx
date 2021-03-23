@@ -8,7 +8,6 @@ interface Webs {
     id: number;
     WebName: string;
     StartTime: string;
-    EndTime: string;
     radio:string;
     WebLink: string;
 }
@@ -18,7 +17,7 @@ const Default_Webs : Webs[] = [];
 const Webinar = () :JSX.Element => {
     const [inputText, setInputText] = useState<string>('');
     const [inputStartTime, setInputStartTime] = useState<string>('');
-    const [inputEndTime, setInputEndTime] = useState<string>('');
+    // const [inputEndTime, setInputEndTime] = useState<string>('');
     const [webLink, setWebLink] = useState<string>('');
     const [webs, setWebs] = useState<Webs[]>(Default_Webs);
     const [radio,setRadio] = useState<string>('Not Verified');
@@ -32,9 +31,9 @@ const Webinar = () :JSX.Element => {
         setInputStartTime(e.currentTarget.value);
     };
 
-    const inputEndTimeHandler = ( e:React.ChangeEvent<HTMLInputElement>) => {
-        setInputEndTime(e.currentTarget.value);
-    };
+    // const inputEndTimeHandler = ( e:React.ChangeEvent<HTMLInputElement>) => {
+    //     setInputEndTime(e.currentTarget.value);
+    // };
 
     const webLinkHandler = (e:React.FormEvent<HTMLInputElement>) => {
         setWebLink(e.currentTarget.value);
@@ -56,7 +55,7 @@ const Webinar = () :JSX.Element => {
             {
                 WebName: inputText,
                 StartTime: inputStartTime,
-                EndTime: inputEndTime,
+        
                 WebLink: webLink,
                 radio:radio,
                 id: Math.random() * 1000,
@@ -64,7 +63,7 @@ const Webinar = () :JSX.Element => {
         ]);
         setInputText('');
         setInputStartTime('');
-        setInputEndTime('');
+ 
         setWebLink('');
     };
     useEffect(() => {
@@ -86,13 +85,13 @@ const Webinar = () :JSX.Element => {
             onChange={(e)=>inputStartTimeHandler(e)}
             type="string"
             />
-            <span className="span-margin">End Time : </span>
+            {/* <span className="span-margin">End Time : </span>
             <input
             className="webinar-input"
             value={inputEndTime}
             onChange={(e)=>inputEndTimeHandler(e)}
             type="string"
-            />
+            /> */}
             <span className="span-margin">Link : </span>
             <input className="webinar-input" value={webLink} onChange={(e) => webLinkHandler(e)} type="text" />
             <label>
@@ -133,7 +132,7 @@ onChange={onValueChange}
                     key={web.id}
                     webName={web.WebName}
                     startTime={web.StartTime}
-                    endTime={web.EndTime}
+
                     webLink={web.WebLink}
                     Radio={web.radio}/>
                      ))}

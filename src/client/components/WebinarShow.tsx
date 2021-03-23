@@ -13,14 +13,14 @@ import React, { useState } from "react";
 interface Props {
   
   startTime: string;
-  endTime:string;
+  
   webName: string;
   webLink: string;
   Radio:string;
 
 }
 
-const WebinarShow = ({ webName, startTime, endTime, webLink ,Radio}: Props) :JSX.Element => {
+const WebinarShow = ({ webName, startTime, webLink ,Radio}: Props) :JSX.Element => {
   // const initialState : Webs[]= [];
   // const [details, setDetails] = useState<Webs[]>(initialState);
 
